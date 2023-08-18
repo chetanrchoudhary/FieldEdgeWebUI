@@ -1,0 +1,10 @@
+erp.cust.ui/.vscode
+erp.cust.ui/.angular
+erp.cust.ui/package-lock.json
+erp.cust.ui/node_modules
+erp.cust.ui/dist
+erp.cust.ui/tmp
+erp.cust.ui/out-tsc
+erp.cust.ui/.editorconfig
+erp.cust.ui/tsconfig.spec.json
+erp.cust.ui/README.md
