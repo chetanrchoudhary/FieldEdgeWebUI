@@ -1,11 +1,14 @@
 # FieldEdgeWebUI
 
-IDE
-1. Visual Studio 2022
+Angular Version: 16
 
-.Net Core version: .Net 6.0 latest standard version
+IDE: Visual Studio Code
 
-Steps to be followed for running project
-1. Clone the project from master branch
-2. Clean Solution
-3. Build Solution & Run
+Steps to be followed to run project
+1. Install Angular v16 in your machine
+2. Clone the project from master branch
+3. Can use any IDE, VS Code preferred
+4. Goto environment.ts file and change port number in apiBaseUrl property as per your api project
+5. Open CMD navigate to path where package.json is located
+6. Run cmd npm-install for installing dependencies
+7. Run cmd ng-serve
