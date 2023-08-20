@@ -7,7 +7,7 @@ import { Observable, finalize } from 'rxjs';
 import { LoaderService } from 'src/service/loader.service';
 
 @Injectable()
-export class NoopInterceptor implements HttpInterceptor {
+export class LoaderInterceptor implements HttpInterceptor {
   constructor(
     private loaderService: LoaderService
   ) {}
