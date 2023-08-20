@@ -1,0 +1,56 @@
+<h2>Customers Dashboard</h2>
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="card">
+                <h3 class="text-center mt-5 mb-5">Customer List</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Customer Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Country Code</th>
+                            <th>Gender</th>
+                            <th>Balance</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let customer of customers | orderBy: 'firstname' | paginate: {
+                            itemsPerPage: tableSize,
+                            currentPage: page,
+                            totalItems: count
+                          };
+                        let i = index">
+                            <td>{{ customer.id }}</td>
+                            <td>{{ customer.firstname }}</td>
+                            <td>{{ customer.lastname }}</td>
+                            <td>{{ customer.email }}</td>
+                            <td>{{ customer.phone_Number }}</td>
+                            <td>{{ customer.country_Code }}</td>
+                            <td>{{ customer.gender }}</td>
+                            <td>{{ customer.balance }}</td>
+                            <td>
+                                <button type="button" class="btn btn-info" (click)="editCustomer(customer.id)"><i
+                                        class="bi bi-pencil-fill"></i></button> |
+                                <button type="button" class="btn btn-danger" (click)="removeCustomer(customer.id)"><i
+                                        class="bi bi-trash3-fill"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-center">
+                    <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+                    </pagination-controls>
+                </div>
+                <div class="vertical-center">
+                    <button class="btn btn-success center" (click)="addCustomer()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
