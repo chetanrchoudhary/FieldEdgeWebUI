@@ -1,6 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './app/app.module';
+import { AppModule } from './component/app.root/app.module';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule)
