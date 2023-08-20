@@ -10,9 +10,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrderByPipe } from 'src/service/OrderByPipe';
 import { ToastrModule } from 'ngx-toastr';
-import { NoopInterceptor } from 'src/interceptor/noop.interceptor';
 import { LoaderComponent } from './loader/loader.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { LoaderInterceptor } from 'src/interceptor/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { NgxUiLoaderModule } from 'ngx-ui-loader';
     NgxUiLoaderModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
