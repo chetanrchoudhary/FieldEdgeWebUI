@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
